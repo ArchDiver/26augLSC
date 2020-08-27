@@ -1,0 +1,74 @@
+section{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bandName bandNameDisplay"
+    "submitButton submitButton"
+    "bandSongName bandSongNameDisplay"
+    "bandLyrics LyricsDisplay"
+    "submitLyrics submitLyrics";
+}
+
+#bandName{
+    grid-area: bandName;
+    border: 1px solid black;
+    display: block;
+}
+
+#bandSongName{
+    grid-area: bandSongName;
+    border: 1px solid black;
+    display: block;
+}
+
+#bandLyrics{
+    grid-area: bandLyrics;
+    border: 1px solid black;
+}
+
+#bandName, #bandSongName, #bandLyrics, label, button{
+    margin-left: 30vw;
+}
+
+#bandNameDisplay{
+    grid-area: bandNameDisplay;
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+#bandSongNameDisplay{
+    grid-area: bandSongNameDisplay;
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+#bandLyricsDisplay{
+    grid-area: bandLyricsDisplay;
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+.alert{
+    font-size: 1rem;
+    font-weight: 500;
+    // border: 1px solid black;
+}
+.alert-danger{
+    color: red;
+    margin-left: 30vw;
+    padding: 2px;
+}
+
+.band{
+    font-size: 5rem;
+}
+
+img.bandimg{
+    display: block;
+    justify-items: center;
+    width: 50vw;
+    height: auto;
+}

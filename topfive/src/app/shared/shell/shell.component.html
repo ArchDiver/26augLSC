@@ -1,1 +1,51 @@
-<p>shell works!</p>
+<!-- <p>shell works!</p> -->
+<mat-sidenav-container class="sidenav-container" >
+    <!-- Sidenav -->
+    <mat-sidenav #drawer class="sidenav" fixedInViewport 
+        [attr.role] = "(isHandset$ | async) ? 'dialog': 'navigation' "
+        [mode] = "(isHandset$ | async) ? 'over' : 'side'"
+        [opened] = "false"
+    >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+        <a mat-list-item routerLink="/home" (click)="drawer.close()">Home</a>
+        <a mat-list-item routerLink="/otis" (click)="drawer.close()">Otis Redding</a>
+        <a mat-list-item routerLink="/beatles" (click)="drawer.close()">The Beatles</a>
+        <a mat-list-item routerLink="/ray" (click)="drawer.close()">Ray Charles</a>
+        <a mat-list-item routerLink="/jesse" (click)="drawer.close()">Jesse Dee</a>
+        <a mat-list-item routerLink="/gorillaz" (click)="drawer.close()">Gorillaz</a>
+        
+    </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+    <!-- Top Toolbar -->
+
+    <mat-toolbar>
+        <button type="button"
+            aria-label="Toggle-sidenav"
+            mat-icon-button
+            (click)= "drawer.toggle()"
+            *ngIf = "isHandset$ | async"
+        ><mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <span class="logo" routerLink="/home" >Leland's Favorite Artist</span>
+    <span class="fill-space" ></span>
+    <div *ngIf="!(isHandset$ | async)">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/otis">Otis Redding</a>
+        <a mat-button routerLink="/beatles">The Beatles</a>
+        <a mat-button routerLink="/ray">Ray Charles</a>
+        <a mat-button routerLink="/jesse">Jesse Dee</a>
+        <a mat-button routerLink="/gorillaz">Gorillaz</a>
+
+        
+    </div>
+
+    </mat-toolbar>
+    <!-- Transclusion on Angular -->
+    <ng-content></ng-content>
+
+</mat-sidenav-content>
+</mat-sidenav-container>

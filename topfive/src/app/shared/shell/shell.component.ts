@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable, fromEventPattern } from 'rxjs';
+import {map, shareReplay } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-shell',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(private BreakpointObserver: BreakpointObserver) { }
+
+  isHandset$: Observable<boolean> = this.BreakpointObserver.observe([Breakpoints.Handset])
+    .pipe(
+      map(result => result.matches), shareReplay()
+    )
 
   ngOnInit(): void {
   }

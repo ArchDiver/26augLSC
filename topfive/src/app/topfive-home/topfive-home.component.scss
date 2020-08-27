@@ -1,0 +1,36 @@
+section{
+    display: grid;
+    height: 100vh;
+    width: 70vw;
+    text-align: center;
+    grid-template-columns: 2fr;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas: 
+    "me"
+    "listen "
+    "lastfm "
+    
+}
+
+#me{
+    grid-area: me;
+    // border: 1px solid black;
+    display: block;
+}
+
+#listen{
+    grid-area: listen;
+    // border: 1px solid black;
+    display: block;
+}
+
+#lastfm{
+    grid-area: lastfm;
+    // border: 1px solid black;
+}
+
+#me, #listen, #lastfm, label, button{
+    margin-left: 30vw;
+}
+
+

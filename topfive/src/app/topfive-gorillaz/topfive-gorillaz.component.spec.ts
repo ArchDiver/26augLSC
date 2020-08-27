@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopfiveGorillazComponent } from './topfive-gorillaz.component';
+import { GorillazComponent } from './topfive-gorillaz.component';
 
-describe('TopfiveGorillazComponent', () => {
-  let component: TopfiveGorillazComponent;
-  let fixture: ComponentFixture<TopfiveGorillazComponent>;
+describe('GorillazComponent', () => {
+  let component: GorillazComponent;
+  let fixture: ComponentFixture<GorillazComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopfiveGorillazComponent ]
+      declarations: [ GorillazComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopfiveGorillazComponent);
+    fixture = TestBed.createComponent(GorillazComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

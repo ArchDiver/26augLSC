@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopfiveRayComponent } from './topfive-ray.component';
+import { RayComponent } from './topfive-ray.component';
 
-describe('TopfiveRayComponent', () => {
-  let component: TopfiveRayComponent;
-  let fixture: ComponentFixture<TopfiveRayComponent>;
+describe('RayComponent', () => {
+  let component: RayComponent;
+  let fixture: ComponentFixture<RayComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopfiveRayComponent ]
+      declarations: [ RayComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopfiveRayComponent);
+    fixture = TestBed.createComponent(RayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

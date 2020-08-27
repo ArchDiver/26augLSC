@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopfiveOtisComponent } from './topfive-otis.component';
+import { OtisComponent } from './topfive-otis.component';
 
-describe('TopfiveOtisComponent', () => {
-  let component: TopfiveOtisComponent;
-  let fixture: ComponentFixture<TopfiveOtisComponent>;
+describe('OtisComponent', () => {
+  let component: OtisComponent;
+  let fixture: ComponentFixture<OtisComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopfiveOtisComponent ]
+      declarations: [ OtisComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopfiveOtisComponent);
+    fixture = TestBed.createComponent(OtisComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

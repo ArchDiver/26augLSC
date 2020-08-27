@@ -1,1 +1,36 @@
-<p>topfive-gorillaz works!</p>
+<!-- <p>topfive-beatles works!</p> -->
+<h1>You can add interesting information about:</h1>
+<h1 class="band">Gorillaz</h1>
+<a href="https://www.gorillaz.com/"><img class="bandimg" border="0" alt="https://www.gorillaz.com/" src="https://media.npr.org/assets/img/2017/04/27/gorillaz_custom-6b87049477a105721c417c5d49cbb4ecb9c42362-s800-c85.jpeg"></a>
+
+<section>
+<div>
+    <form [formGroup] = "bandForm"> <!-- (ngSubmit)= "onSubmit()" -->
+        <label for="bandName">Information about the Artist:</label>
+        <input type="text" formControlName = "bandName" id="bandName" [(ngModel)] = "bandNameDisplay">
+        <div *ngIf="bandName.invalid && (bandName.dirty || bandName.touched)" class="alert alert-danger">Information about the artist requires at least 10 characters!</div>
+        <button type="button" (click)='onSubmit()' id="submitButton">Submit Button</button>
+
+    </form>
+    <form [formGroup] = "songForm">
+        <label for="bandSongName">Song Name:</label>
+        <input [(ngModel)] = "bandSongNameDisplay" type="text" formControlName="bandSongName" id="bandSongName">
+        <div *ngIf="bandSongName.invalid && (bandSongName.dirty || bandSongName.touched)" class="alert alert-danger">The Song Name is required!</div>
+        
+    
+        <label for="bandLyrics">Lyrics:</label>
+        <input type="text" formControlName = "bandLyrics" id="bandLyrics" [(ngModel)] = "bandLyricsDisplay" >
+        <div *ngIf="bandLyrics.invalid && (bandLyrics.dirty || bandLyrics.touched)" class="alert alert-danger">Lyrics requires at least 10 characters!</div>
+    
+        <button type="button" (click)='onSubmit2()' id="submitLyrics">Submit Lyrics</button>
+        <!-- <button type="submit">Submit Button</button> -->
+    </form>
+</div>
+
+<div>
+    <p id="bandNameDisplay" >{{ bandNameDisplay }}</p>
+    <p id="bandSongNameDisplay" >{{ bandSongNameDisplay}} </p>
+    <p id="bandLyricsDisplay" >{{ bandLyricsDisplay}}</p>
+</div>
+
+</section>
