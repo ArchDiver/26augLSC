@@ -1,4 +1,5 @@
 section{
+    background: inherit;
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -75,9 +76,9 @@ img.bandimg{
 body{
     color: whitesmoke;
     height: 100%;
-    background-image: linear-gradient(to right bottom, rgba(30,115,172,0.4), rgba(142,57,153,0.4)), url(../images/records.jpeg);
-    background-size: cover;
-    background-position: 100%;
-    position: relative;
-    background-repeat: repeat;
+    background: linear-gradient(to right bottom, rgba(30,115,172,0.4), rgba(142,57,153,0.4)), url(../images/records.jpeg) repeat;
+    // background-size: cover;
+    // background-position: 100%;
+    // position: relative;
+    
 }
