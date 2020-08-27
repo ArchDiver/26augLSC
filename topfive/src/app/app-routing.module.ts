@@ -11,7 +11,7 @@ import { RayComponent } from './topfive-ray/topfive-ray.component';
 const routes: Routes = [
   {path: 'beatles', component: BeatlesComponent},
   {path: 'gorillaz', component: GorillazComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'jesse', component:JesseComponent},
   {path: 'otis', component:OtisComponent},
   {path: 'ray', component:RayComponent}

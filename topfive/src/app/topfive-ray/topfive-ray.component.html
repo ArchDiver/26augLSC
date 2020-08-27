@@ -1,36 +1,39 @@
-<!-- <p>topfive-ray works!</p> -->
-<h1>You can add interesting information about:</h1>
-<h1 class="band">Ray Charles</h1>
-<a href="https://raycharles.com/"><img class="bandimg" border="0" alt="https://raycharles.com/" src="https://concord.com/wp-content/uploads/2018/12/ray-charles-1.png"></a>
-
-<section>
-<div>
-    <form [formGroup] = "bandForm"> <!-- (ngSubmit)= "onSubmit()" -->
-        <label for="bandName">Information about the Artist:</label>
-        <input type="text" formControlName = "bandName" id="bandName" [(ngModel)] = "bandNameDisplay">
-        <div *ngIf="bandName.invalid && (bandName.dirty || bandName.touched)" class="alert alert-danger">Information about the artist requires at least 10 characters!</div>
-        <button type="button" (click)='onSubmit()' id="submitButton">Submit Button</button>
-
-    </form>
-    <form [formGroup] = "songForm">
-        <label for="bandSongName">Song Name:</label>
-        <input [(ngModel)] = "bandSongNameDisplay" type="text" formControlName="bandSongName" id="bandSongName">
-        <div *ngIf="bandSongName.invalid && (bandSongName.dirty || bandSongName.touched)" class="alert alert-danger">The Song Name is required!</div>
+<body>
+    <!-- <p>topfive-ray works!</p> -->
+    <h1>You can add interesting information about:</h1>
+    <h1 class="band">Ray Charles</h1>
+    <a href="https://raycharles.com/"><img class="bandimg" border="0" alt="https://raycharles.com/" src="https://concord.com/wp-content/uploads/2018/12/ray-charles-1.png"></a>
+    
+    <section>
+    <div>
+        <form [formGroup] = "bandForm"> <!-- (ngSubmit)= "onSubmit()" -->
+            <label for="bandName">Information about the Artist:</label>
+            <input type="text" formControlName = "bandName" id="bandName" [(ngModel)] = "bandNameDisplay">
+            <div *ngIf="bandName.invalid && (bandName.dirty || bandName.touched)" class="alert alert-danger">Information about the artist requires at least 10 characters!</div>
+            <button type="button" (click)='onSubmit()' id="submitButton">Submit Button</button>
+    
+        </form>
+        <form [formGroup] = "songForm">
+            <label for="bandSongName">Song Name:</label>
+            <input [(ngModel)] = "bandSongNameDisplay" type="text" formControlName="bandSongName" id="bandSongName">
+            <div *ngIf="bandSongName.invalid && (bandSongName.dirty || bandSongName.touched)" class="alert alert-danger">The Song Name is required!</div>
+            
         
+            <label for="bandLyrics">Lyrics:</label>
+            <input type="text" formControlName = "bandLyrics" id="bandLyrics" [(ngModel)] = "bandLyricsDisplay" >
+            <div *ngIf="bandLyrics.invalid && (bandLyrics.dirty || bandLyrics.touched)" class="alert alert-danger">Lyrics requires at least 10 characters!</div>
+        
+            <button type="button" (click)='onSubmit2()' id="submitLyrics">Submit Lyrics</button>
+            <!-- <button type="submit">Submit Button</button> -->
+        </form>
+    </div>
     
-        <label for="bandLyrics">Lyrics:</label>
-        <input type="text" formControlName = "bandLyrics" id="bandLyrics" [(ngModel)] = "bandLyricsDisplay" >
-        <div *ngIf="bandLyrics.invalid && (bandLyrics.dirty || bandLyrics.touched)" class="alert alert-danger">Lyrics requires at least 10 characters!</div>
+    <div>
+        <p id="bandNameDisplay" >{{ bandNameDisplay }}</p>
+        <p id="bandSongNameDisplay" >{{ bandSongNameDisplay}} </p>
+        <p id="bandLyricsDisplay" >{{ bandLyricsDisplay}}</p>
+    </div>
     
-        <button type="button" (click)='onSubmit2()' id="submitLyrics">Submit Lyrics</button>
-        <!-- <button type="submit">Submit Button</button> -->
-    </form>
-</div>
-
-<div>
-    <p id="bandNameDisplay" >{{ bandNameDisplay }}</p>
-    <p id="bandSongNameDisplay" >{{ bandSongNameDisplay}} </p>
-    <p id="bandLyricsDisplay" >{{ bandLyricsDisplay}}</p>
-</div>
-
-</section>
+    </section>
+    
+</body>

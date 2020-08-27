@@ -8,29 +8,55 @@ section{
     grid-template-areas: 
     "me"
     "listen "
-    "lastfm "
+    "lastfm ";
+    // color: whitesmoke;
+    // background-image: url(../images/records.jpeg); // 
+    // background-size: cover;
+    // background-repeat: repeat;
+    // background-position: center;
     
 }
 
 #me{
     grid-area: me;
+    padding: 2% 0;
     // border: 1px solid black;
     display: block;
+    font-size: 50px;
 }
 
 #listen{
+    padding: 4% 0;
+    margin: 3%;
+    font-size: 30px;
     grid-area: listen;
     // border: 1px solid black;
     display: block;
 }
 
 #lastfm{
+    padding:1.5% 0;
+    margin: 6%;
     grid-area: lastfm;
+    font-size: 30px;
     // border: 1px solid black;
+    text-shadow: 0 20px 2px 2px whitesmoke;
+    outline: 5px whitesmoke;
+    background-color: rgb(112, 112, 235);
+    color:rgb(18, 15, 255);
+    text-decoration: blue;
+    
 }
 
 #me, #listen, #lastfm, label, button{
     margin-left: 30vw;
 }
-
-
+body{
+    color: whitesmoke;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, rgba(30,115,172,0.4), rgba(142,57,153,0.4)), url(../images/records.jpeg);
+    background-size: cover;
+    background-position: 100%;
+    position: relative;
+    background-repeat: repeat;
+}

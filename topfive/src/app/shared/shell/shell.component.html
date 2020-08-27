@@ -8,7 +8,7 @@
     >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-        <a mat-list-item routerLink="/home" (click)="drawer.close()">Home</a>
+        <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
         <a mat-list-item routerLink="/otis" (click)="drawer.close()">Otis Redding</a>
         <a mat-list-item routerLink="/beatles" (click)="drawer.close()">The Beatles</a>
         <a mat-list-item routerLink="/ray" (click)="drawer.close()">Ray Charles</a>
@@ -30,10 +30,10 @@
         ><mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
 
-    <span class="logo" routerLink="/home" >Leland's Favorite Artist</span>
+    <span class="logo" routerLink="/" >Leland's Favorite Artist</span>
     <span class="fill-space" ></span>
     <div *ngIf="!(isHandset$ | async)">
-        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/">Home</a>
         <a mat-button routerLink="/otis">Otis Redding</a>
         <a mat-button routerLink="/beatles">The Beatles</a>
         <a mat-button routerLink="/ray">Ray Charles</a>
@@ -49,3 +49,7 @@
 
 </mat-sidenav-content>
 </mat-sidenav-container>
+<body>
+    
+</body>
+
